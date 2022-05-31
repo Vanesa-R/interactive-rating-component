@@ -1,0 +1,12 @@
+{
+    "card": {
+        "title" : "¿Cómo lo hicimos?",
+        "paragraph" : "Por favor, dinos cómo fue nuestro soporte. Apreciamos todos los comentarios para mejorar nuestra oferta.",
+        "submit" : "Enviar"
+    },
+    "thanks" : {
+        "valueSelected": "Has seleccionado {{value}} de 5",
+        "pretitle" : "¡Gracias!",
+        "paragraph" : "Agradecemos que hayas dedicado tu tiempo para evaluarnos. Si necesitas más soporte, ¡no dudes en ponerte en contacto!"
+    }
+}
