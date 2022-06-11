@@ -46,12 +46,13 @@ const App = () => {
   
   // Mostrar container de ratings
   const [showRatings, setShowRatings] = useState(true);
-
+  
   // Valor de rating
   const [value, setValue] = useState();
-
+  
   // Traducciones
   const [ t, i18n ] = useTranslation(["text"]);
+  
 
   return (
     <>

@@ -48,9 +48,8 @@ const Card = ({ value, setValue, showRatings, setShowRatings, t, i18n }) => {
 
     // Habilitar boton submit
     const [disabled, setDisabled] = useState(true);
-    
-    // Traducciones
 
+    
     return (
         <>
         <ThemeProvider theme={ colors }>
@@ -103,7 +102,10 @@ const Card = ({ value, setValue, showRatings, setShowRatings, t, i18n }) => {
                      <Thanks
                         value={value}
                         t={t}
-                        i18n={i18n}/>
+                        i18n={i18n}
+                        setShowRatings={setShowRatings}
+                        setDisabled={setDisabled}
+                        setValue={setValue}/>
                     </>
                 )}
 

@@ -1,7 +1,8 @@
 import React from "react";
 
 // Assets
-import star from "../images/icon-star.svg";
+import {  BsFillStarFill} from "react-icons/bs";
+
 
 // Styles
 import styled from "styled-components";
@@ -20,7 +21,7 @@ const CSSIcon = styled.div`
     background-color: ${({theme}) => colors.blue80};
 
     & .icon__star {
-        transform: scale(.8);
+      color: ${({theme}) => colors.orange};
     }
 `
 
@@ -32,7 +33,7 @@ const Icon = () => {
             as={motion.div}
             variants={childrenVariant}>
 
-            <img src={star} className="icon__star" alt="Icon star" />
+            <BsFillStarFill className="icon__star"  alt="Icon star"/>
 
           </CSSIcon>
         </>

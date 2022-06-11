@@ -2,9 +2,11 @@ import React from "react";
 
 // Assets
 import thanks from "../images/illustration-thank-you.svg";
+import { IoReload } from "react-icons/io5";
 
 // Styles
 import styled from "styled-components";
+import colors from "../styles/theming/colors";
 import { motion } from "framer-motion";
 import { cardVariant, childrenVariant } from "../styles/animations/Animations";
 
@@ -32,14 +34,26 @@ const CSSThanks = styled.div`
 
     & .value--selected,
     & .pretitle,
-    & .rating__paragraph {
+    & .rating__paragraph,
+    & .icon__reload {
         margin-top: 2em;
         margin-bottom: 0;
+    }
+
+    & .icon__reload {
+        color: ${({ theme }) => theme.grey20};
+        cursor: pointer;
+        transition: 450ms ease color;
+
+        &:hover {
+         color: ${({theme}) => colors.orange};
+        }
+
     }
 `
 
 
-const Thanks = ({ value, t, i18n }) => {
+const Thanks = ({ value, t, setShowRatings, setDisabled, setValue }) => {
     
     return (
         <>
@@ -72,6 +86,16 @@ const Thanks = ({ value, t, i18n }) => {
                     variants={childrenVariant}>
                     {t("thanks.paragraph")}
                 </motion.p>
+
+                <IoReload 
+                    className="icon__reload"
+                    as={motion.div}
+                    variants={childrenVariant}
+                    onClick={()=> {
+                        window.location.reload();
+                    }}>
+                </IoReload>
+
 
             </CSSThanks>
         </>

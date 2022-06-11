@@ -1,7 +1,7 @@
 import React from "react";
 
 // Estilos
-import styled, {ThemeProvider} from "styled-components";
+import styled from "styled-components";
 import device from "../styles/responsive/breakpoints";
 import colors from "../styles/theming/colors";
 import { motion } from "framer-motion";
@@ -44,7 +44,6 @@ const Button = ({value, setValue, setDisabled }) => {
 
   return (
     <>
-      <ThemeProvider theme={ colors }>
         
         <motion.div
           className="ratings">
@@ -67,7 +66,6 @@ const Button = ({value, setValue, setDisabled }) => {
           ))}
         </motion.div>
 
-      </ThemeProvider>
     </>
   )
 }
